@@ -34,8 +34,13 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
-        ]
+        ],
+        "test": "@php artisan test",
+        "stan": "vendor/bin/phpstan analyse",
+        "lint": "PHP_CS_FIXER_IGNORE_ENV=true vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "lint:fix": "PHP_CS_FIXER_IGNORE_ENV=true vendor/bin/php-cs-fixer fix"
     },
+
     "extra": {
         "laravel": {
             "dont-discover": []
